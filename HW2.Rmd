@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 You can annotate and run your script to make it easier to visualize. Check edit below
 In addition, you can use the URL I provided when you import the data set.
 
+Thank you, it's more beautiful now :)
+
 
 ```{r, eval= T}
 #HW2
