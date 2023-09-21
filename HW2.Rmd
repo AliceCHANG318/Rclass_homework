@@ -4,18 +4,30 @@ author: "Alice"
 date: "2023-09-20"
 output: html_document
 ---
-```{r}
-#HW2
-
-library(tidyr)
-rairuoho<-read.table('C:/Users/silve/Documents/IO2023/R2023/HW2.txt',header=T, sep = '\t', dec = '.')
-rairuoho$treatment<-ifelse(rairuoho$treatment=='water','water','enriched')
-rairuoho_long<-rairuoho%>%pivot_longer(cols = day3:day8,names_to = 'day',values_to = 'length')
-rairuoho_long$spatial<-paste(rairuoho_long$spatial1,rairuoho_long$spatial2,sep = "_")
-rairuoho_long[,c(4,5,6,7)]<-NULL
-```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+You can annotate and run your script to make it easier to visualize. Check edit below
+In addition, you can use the URL I provided when you import the data set.
+
+
+```{r, eval= T}
+#HW2
+
+library(tidyr)
+rairuoho<-read.table('C:/Users/silve/Documents/IO2023/R2023/HW2.txt',header=T, sep = '\t', dec = '.')
+head(rairuoho) # your table at the beginning
+
+rairuoho$treatment<-ifelse(rairuoho$treatment=='water','water','enriched')
+rairuoho_long<-rairuoho%>%pivot_longer(cols = day3:day8,names_to = 'day',values_to = 'length')
+rairuoho_long$spatial<-paste(rairuoho_long$spatial1,rairuoho_long$spatial2,sep = "_")
+rairuoho_long[,c(4,5,6,7)]<-NULL
+head(rairuoho_long) # your table at the end
+
+```
+
+
 
