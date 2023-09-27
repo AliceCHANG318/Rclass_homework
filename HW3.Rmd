@@ -1,0 +1,45 @@
+---
+title: "HW3"
+author: "Alice"
+date: "2023-09-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+```{r cars}
+#HW3
+
+##element1
+weight1<-c(104,95,87,77,112)
+weight1dou<-as.double(weight1)
+typeof(weight1dou)
+weight2<-c(96,91,81,75,118)
+weight2dou<-as.double(weight2)
+typeof(weight2dou)
+df<-data.frame(beore_diet=weight1dou,after_diet=weight2dou)
+list(df)
+
+##element2
+subject<-c("1","2","3","4","5")
+str(subject)
+weight_loss<-(weight2-weight1)/weight1*100
+str(weight_loss)
+table<-data.frame(subject,weight_loss)
+list(table)
+WEIGHT_LOSS<-list(subject,weight_loss,table)
+str(WEIGHT_LOSS)
+
+##element3
+message1<-"I was really afraid of coding at first but now I start trying to figure out them step by step."
+message2<-"I feel the sense of achievement everytime I finish the assignment :)"
+message<-c(message1,message2)
+
+##list
+BUBBLE_DIET<-list(df,WEIGHT_LOSS,message)
+str(BUBBLE_DIET)
+```
+
+
