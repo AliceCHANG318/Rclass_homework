@@ -23,7 +23,9 @@ df<-data.frame(beore_diet=weight1dou,after_diet=weight2dou)
 list(df)
 
 ##element2
-subject<-c("1","2","3","4","5")
+subject<-c("subject_1","subject_2","subject_3","subject_4","subject_5")
+rownames(df)<-subject
+df
 str(subject)
 weight_loss<-(weight2-weight1)/weight1*100
 str(weight_loss)
@@ -34,8 +36,8 @@ str(WEIGHT_LOSS)
 
 ##element3
 message1<-"I was really afraid of coding at first but now I start trying to figure out them step by step."
-message2<-"I feel the sense of achievement everytime I finish the assignment :)"
-message<-c(message1,message2)
+message2<-"I feel the sense of achievement everytime I finish the assignment :)" 
+message<-c(message1,message2) # Amazing, I am glad you can feel that you are progressing. Keep going !
 
 ##list
 BUBBLE_DIET<-list(df,WEIGHT_LOSS,message)
