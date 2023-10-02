@@ -378,33 +378,41 @@ list(df)</code></pre>
 ## 4         77         75
 ## 5        112        118</code></pre>
 <pre class="r"><code>##element2
-subject&lt;-c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-str(subject)</code></pre>
-<pre><code>##  chr [1:5] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot;</code></pre>
+subject&lt;-c(&quot;subject_1&quot;,&quot;subject_2&quot;,&quot;subject_3&quot;,&quot;subject_4&quot;,&quot;subject_5&quot;)
+rownames(df)&lt;-subject
+df</code></pre>
+<pre><code>##           beore_diet after_diet
+## subject_1        104         96
+## subject_2         95         91
+## subject_3         87         81
+## subject_4         77         75
+## subject_5        112        118</code></pre>
+<pre class="r"><code>str(subject)</code></pre>
+<pre><code>##  chr [1:5] &quot;subject_1&quot; &quot;subject_2&quot; &quot;subject_3&quot; &quot;subject_4&quot; &quot;subject_5&quot;</code></pre>
 <pre class="r"><code>weight_loss&lt;-(weight2-weight1)/weight1*100
 str(weight_loss)</code></pre>
 <pre><code>##  num [1:5] -7.69 -4.21 -6.9 -2.6 5.36</code></pre>
 <pre class="r"><code>table&lt;-data.frame(subject,weight_loss)
 list(table)</code></pre>
 <pre><code>## [[1]]
-##   subject weight_loss
-## 1       1   -7.692308
-## 2       2   -4.210526
-## 3       3   -6.896552
-## 4       4   -2.597403
-## 5       5    5.357143</code></pre>
+##     subject weight_loss
+## 1 subject_1   -7.692308
+## 2 subject_2   -4.210526
+## 3 subject_3   -6.896552
+## 4 subject_4   -2.597403
+## 5 subject_5    5.357143</code></pre>
 <pre class="r"><code>WEIGHT_LOSS&lt;-list(subject,weight_loss,table)
 str(WEIGHT_LOSS)</code></pre>
 <pre><code>## List of 3
-##  $ : chr [1:5] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+##  $ : chr [1:5] &quot;subject_1&quot; &quot;subject_2&quot; &quot;subject_3&quot; &quot;subject_4&quot; ...
 ##  $ : num [1:5] -7.69 -4.21 -6.9 -2.6 5.36
 ##  $ :&#39;data.frame&#39;:    5 obs. of  2 variables:
-##   ..$ subject    : chr [1:5] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+##   ..$ subject    : chr [1:5] &quot;subject_1&quot; &quot;subject_2&quot; &quot;subject_3&quot; &quot;subject_4&quot; ...
 ##   ..$ weight_loss: num [1:5] -7.69 -4.21 -6.9 -2.6 5.36</code></pre>
 <pre class="r"><code>##element3
 message1&lt;-&quot;I was really afraid of coding at first but now I start trying to figure out them step by step.&quot;
-message2&lt;-&quot;I feel the sense of achievement everytime I finish the assignment :)&quot;
-message&lt;-c(message1,message2)
+message2&lt;-&quot;I feel the sense of achievement everytime I finish the assignment :)&quot; 
+message&lt;-c(message1,message2) # Amazing, I am glad you can feel that you are progressing. Keep going !
 
 ##list
 BUBBLE_DIET&lt;-list(df,WEIGHT_LOSS,message)
@@ -414,10 +422,10 @@ str(BUBBLE_DIET)</code></pre>
 ##   ..$ beore_diet: num [1:5] 104 95 87 77 112
 ##   ..$ after_diet: num [1:5] 96 91 81 75 118
 ##  $ :List of 3
-##   ..$ : chr [1:5] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+##   ..$ : chr [1:5] &quot;subject_1&quot; &quot;subject_2&quot; &quot;subject_3&quot; &quot;subject_4&quot; ...
 ##   ..$ : num [1:5] -7.69 -4.21 -6.9 -2.6 5.36
 ##   ..$ :&#39;data.frame&#39;: 5 obs. of  2 variables:
-##   .. ..$ subject    : chr [1:5] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+##   .. ..$ subject    : chr [1:5] &quot;subject_1&quot; &quot;subject_2&quot; &quot;subject_3&quot; &quot;subject_4&quot; ...
 ##   .. ..$ weight_loss: num [1:5] -7.69 -4.21 -6.9 -2.6 5.36
 ##  $ : chr [1:2] &quot;I was really afraid of coding at first but now I start trying to figure out them step by step.&quot; &quot;I feel the sense of achievement everytime I finish the assignment :)&quot;</code></pre>
 
