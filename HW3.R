@@ -18,8 +18,9 @@ list(table)
 WEIGHT_LOSS<-list(subject,weight_loss,table)
 str(WEIGHT_LOSS)
 
-message<-"I was really afraid of coding at first but now I start trying to figure out them
-          step by step. I feel the sense of achievement everytime I finish the assignment :)"
+message1<-"I was really afraid of coding at first but now I start trying to figure out them step by step."
+message2<-"I feel the sense of achievement everytime I finish the assignment :)"
+message<-c(message1,message2)
 
 BUBBLE_DIET<-list(df,WEIGHT_LOSS,message)
 str(BUBBLE_DIET)
